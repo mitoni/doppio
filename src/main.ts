@@ -77,7 +77,7 @@ async function displayIpAddress(): Promise<void> {
   const ip = await invoke<string>("find_my_ip", {});
 
   if (ipAddressEl && ip) {
-    ipAddressEl.innerHTML += ip;
+    ipAddressEl.innerHTML = `https://${ip}`;
   }
 }
 
